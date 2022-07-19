@@ -349,6 +349,8 @@
           trigger: ".section01",
           scrub: 1,
           pin: true,
+          start: "top top",
+          end: "bottom+=1000 top",
           markers: {
             startColor: "#ff0000",
             endColor: "#0000ff",
@@ -384,6 +386,59 @@
         .from(".section01 .txt04", {
           opacity: 0,
           scale: 3,
+        })
+        .from(".section01 .txt04", {
+          duration: 10,
+        });
+
+      const section02TL = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section02",
+          scrub: 1,
+          pin: true,
+          start: "top top",
+          end: "bottom+=1000 top",
+          markers: {
+            startColor: "#ff0000",
+            endColor: "#0000ff",
+            fontSize: "20px",
+            indent: 50,
+          },
+        },
+      });
+      section02TL
+        .from(".section02 .title .char", {
+          opacity: 0,
+          x: 100,
+          stagger: { each: 0.1 },
+        })
+        .from(".section02 .title", { background: "transparent", duration: 3 })
+        .from(".section02 .mainTxt .mainTxt01", {
+          opacity: 0,
+          x: -100,
+        })
+        .from(".section02 .mainTxt .mainTxt02", {
+          opacity: 0,
+          x: 100,
+        })
+        .from(".section02 .mainTxt .mainTxt03", {
+          opacity: 0,
+          x: -100,
+        })
+        .from(".section02 .circleList li", {
+          x: 100,
+          opacity: 0,
+          duration: 2,
+          stagger: {
+            each: 1,
+          },
+        })
+        .from(".section02 .cduBox", {
+          opacity: 0,
+          scale: 3,
+        })
+        .from(".section02 .cduBox", {
+          duration: 10,
         });
     </script>
   </body>
