@@ -440,6 +440,58 @@
         .from(".section02 .cduBox", {
           duration: 10,
         });
+      const section03TL = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section03",
+          scrub: 1,
+          pin: true,
+          start: "top top",
+          end: "bottom+=1000 top",
+          markers: {
+            startColor: "#ff0000",
+            endColor: "#0000ff",
+            fontSize: "20px",
+            indent: 50,
+          },
+        },
+      });
+      section03TL
+        .from(".section03 .title .char", {
+          opacity: 0,
+          x: 100,
+          stagger: { each: 0.1 },
+        })
+        .from(".section03 .title", { background: "transparent", duration: 3 })
+        .from(".section03 .mainTxt .char", {
+          opacity: 0,
+          x: 100,
+          stagger: {
+            each: 0.2,
+          },
+        })
+
+        .from(".section03 .list li", {
+          x: 100,
+          opacity: 0,
+          duration: 2,
+          stagger: {
+            each: 1,
+          },
+        })
+        .from(".section03 .airplane", {
+          x: -100,
+          y: 100,
+          opacity: 0,
+          duration: 2,
+        })
+        .from(".section03 .redBox", {
+          y: 100,
+          opacity: 0,
+          duration: 2,
+        })
+        .from(".section03 .redBox", {
+          duration: 10,
+        });
     </script>
   </body>
 </html>
