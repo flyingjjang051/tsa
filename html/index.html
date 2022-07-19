@@ -492,6 +492,150 @@
         .from(".section03 .redBox", {
           duration: 10,
         });
+      const section04TL = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section04",
+          scrub: 1,
+          pin: true,
+          start: "top top",
+          end: "bottom+=1000 top",
+          markers: {
+            startColor: "#ff0000",
+            endColor: "#0000ff",
+            fontSize: "20px",
+            indent: 50,
+          },
+        },
+      });
+      section04TL
+        .from(".section04 .title .char", {
+          opacity: 0,
+          x: 100,
+          stagger: { each: 0.1 },
+        })
+        .from(".section04 .title", { background: "transparent", duration: 3 })
+        .from(".section04 .mainTxt .char", {
+          opacity: 0,
+          x: 100,
+          stagger: {
+            each: 0.2,
+          },
+        })
+
+        .from(".section04 .list li", {
+          scale: 0,
+          opacity: 0,
+          duration: 2,
+          stagger: {
+            each: 1,
+          },
+        })
+        .from(".section04 .list", {
+          duration: 10,
+        });
+
+      const section05TL = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section05",
+          scrub: 1,
+          pin: true,
+          start: "top top",
+          end: "bottom+=1000 top",
+          markers: {
+            startColor: "#ff0000",
+            endColor: "#0000ff",
+            fontSize: "20px",
+            indent: 50,
+          },
+        },
+      });
+      section05TL
+        .from(".section05 .title .char", {
+          opacity: 0,
+          x: 100,
+          stagger: { each: 0.1 },
+        })
+        .from(".section05 .title", { background: "transparent", duration: 3 })
+        .from(".section05 .mainTxt .mainTxt01", {
+          opacity: 0,
+          x: 100,
+        })
+        .from(".section05 .mainTxt .mainTxt02", {
+          opacity: 0,
+          x: -100,
+        })
+        .from(".section05 .mainTxt .mainTxt03", {
+          opacity: 0,
+          x: 100,
+        })
+
+        .from(".section05 .list li", {
+          scale: 0,
+          opacity: 0,
+          duration: 2,
+          stagger: {
+            each: 1,
+          },
+        })
+        .from(CSSRulePlugin.getRule(".tsa .section05 li:after"), {
+          cssRule: {
+            scale: 0,
+            opacity: 0,
+            duration: 2,
+          },
+          stagger: {
+            each: 1,
+          },
+        })
+
+        .from(".section05 .list", {
+          duration: 10,
+        });
+      const section06TL = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section06",
+          scrub: 1,
+          pin: true,
+          start: "top top",
+          end: "bottom+=1000 top",
+          markers: {
+            startColor: "#ff0000",
+            endColor: "#0000ff",
+            fontSize: "20px",
+            indent: 50,
+          },
+        },
+      });
+      section06TL
+        .from(".section06 .mainTxt .char", {
+          opacity: 0,
+          x: 100,
+          stagger: { each: 0.1 },
+        })
+        .from(".section06 .subTxt .char", {
+          opacity: 0,
+          x: 100,
+          stagger: { each: 0.1 },
+        })
+        .from(".section06 .txtDash .char", {
+          opacity: 0,
+          x: 100,
+          stagger: { each: 0.1 },
+        })
+        .from(".section06 .img", {
+          opacity: 0,
+          scale: 3,
+        })
+        .from(".section06 .shortcut .char", {
+          opacity: 0,
+          x: 100,
+          stagger: { each: 0.1 },
+        })
+        .from(".section06 .btns a", {
+          opacity: 0,
+          x: 100,
+          stagger: { each: 0.1 },
+        });
     </script>
   </body>
 </html>
